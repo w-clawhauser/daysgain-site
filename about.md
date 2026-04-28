@@ -4,15 +4,21 @@ Fintify is a personal portfolio and passive income tracking app designed for sel
 
 Fintify helps you see through scattered accounts, markets, holdings, returns, and dividend income in one clear view.
 
-## Why Fintify Exists
+## Why I Built Fintify
 
-Fintify was built from a real personal need: a better way to understand investments spread across multiple accounts, brokerages, markets, currencies, and holdings.
+Fintify started as a personal tool.
 
-For Canadian investors, records can quickly become fragmented across TFSA, RRSP, non-registered accounts, different brokerages, Canadian and US securities, ETFs, dividend stocks, cash activities, and deposit or withdrawal history.
+As someone who enjoys stock investing and also works in technology, I wanted a better way to understand my own portfolio beyond just checking prices. I cared not only about what I owned, but also how my investments were performing, how much dividend income they generated, and how my accounts were organized across different markets and brokerages.
 
-For registered accounts such as TFSA and RRSP, keeping a clear personal record of deposits and withdrawals can also be helpful when reviewing contribution history.
+Living in Canada also made portfolio tracking more fragmented. Investments can be spread across TFSA, RRSP, and non-registered accounts, sometimes across more than one brokerage, and often across both Canadian and US markets. Deposit and withdrawal records also matter, especially when reviewing contribution history for registered accounts.
 
-Fintify brings these pieces together into one clear view.
+Before building Fintify, I found myself relying on different tools for different questions: one place for market prices, another place for dividend tracking, and spreadsheets for personal records. That worked for a while, but it was not the clear, unified view I wanted.
+
+So I built Fintify to bring these pieces together.
+
+Fintify also reflects a family use case. As a Chinese Canadian investor, I wanted one place to track Canadian and US investments, while also helping my mother keep a clearer record of her stock investments and dividend income in China. This is one reason Fintify includes support for China A-share securities alongside US and Canadian markets.
+
+Fintify is designed to help turn scattered investment records into a clearer picture of portfolio value, returns, dividends, passive income, account structure, and personal contribution records.
 
 ## What Fintify Helps Track
 
