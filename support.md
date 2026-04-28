@@ -8,7 +8,7 @@ Fintify is a personal portfolio and dividend tracking app designed to help users
 
 For questions, feedback, or bug reports, contact us at:
 
-**[fintify.support@gmail.com]**
+**fintify.support@gmail.com**
 
 When reporting an issue, please include as much of the following information as possible:
 
@@ -23,13 +23,31 @@ Please do not include sensitive personal or financial information unless you cho
 
 ## Common Topics
 
+### Supported Markets
+
+Fintify currently supports portfolio tracking for:
+
+- U.S. stocks and ETFs
+- Canadian stocks and ETFs
+- China A-share stocks and ETFs
+
+Ticker formats may vary by market. For example:
+
+- U.S.: `AAPL`, `MSFT`, `VOO`
+- Canada: `RY.TO`, `ENB.TO`, `VDY.TO`
+- China A-share: `600036.SS`, `000651.SZ`, `510300.SS`
+
+Other markets, such as Hong Kong, Europe, Australia, Japan, and other international exchanges, are not officially supported yet.
+
+Market data availability may vary by ticker and data provider.
+
 ### CSV Import
 
 Fintify supports CSV import so you can bring your transaction history into the app.
 
 See the CSV Import Guide for formatting requirements and examples:
 
-[CSV Import Guide](csv-import-guide.md)
+[CSV Import Guide](https://w-clawhauser.github.io/fintify-site/csv-import-guide/)
 
 ### CSV Export
 
@@ -55,7 +73,7 @@ Fintify is designed as a local-first app. Your portfolio records are stored on y
 
 Read the Privacy Policy:
 
-[Privacy Policy](privacy.md)
+[Privacy Policy](https://w-clawhauser.github.io/fintify-site/privacy/)
 
 ### Terms and Disclaimer
 
@@ -63,10 +81,10 @@ Fintify is for personal tracking, organization, and informational purposes only.
 
 Read the Terms and Disclaimer:
 
-[Terms and Disclaimer](terms.md)
+[Terms and Disclaimer](https://w-clawhauser.github.io/fintify-site/terms/)
 
 ## Useful Links
 
-- [Privacy Policy](privacy.md)
-- [Terms and Disclaimer](terms.md)
-- [CSV Import Guide](csv-import-guide.md)
+- [Privacy Policy](https://w-clawhauser.github.io/fintify-site/privacy/)
+- [Terms and Disclaimer](https://w-clawhauser.github.io/fintify-site/terms/)
+- [CSV Import Guide](https://w-clawhauser.github.io/fintify-site/csv-import-guide/)
