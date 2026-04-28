@@ -1,0 +1,8 @@
+title: Fintify
+description: Official support, privacy policy, and documentation site for Fintify.
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
