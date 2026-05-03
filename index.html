@@ -4,23 +4,28 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fintify - Portfolio & Dividend Tracker</title>
-  <meta name="description" content="Fintify is a personal portfolio and passive income tracking app for self-directed investors." />
+  <meta
+    name="description"
+    content="Bring together scattered accounts, markets, holdings, returns, dividends, and cash activities in one clear view."
+  />
 
   <style>
     :root {
       color-scheme: dark;
       --bg: #050607;
-      --panel: rgba(255, 255, 255, 0.06);
-      --panel-border: rgba(255, 255, 255, 0.12);
+      --surface: rgba(255, 255, 255, 0.06);
+      --surface-strong: rgba(255, 255, 255, 0.10);
+      --border: rgba(255, 255, 255, 0.12);
       --text: #f7f8fa;
       --muted: rgba(247, 248, 250, 0.68);
-      --soft: rgba(247, 248, 250, 0.42);
+      --soft: rgba(247, 248, 250, 0.46);
       --blue: #0a84ff;
       --blue-soft: rgba(10, 132, 255, 0.18);
       --green: #30d158;
       --gold: #d6b84f;
-      --radius: 28px;
-      --shadow: 0 30px 120px rgba(0, 95, 255, 0.22);
+      --max: 1180px;
+      --radius: 30px;
+      --shadow: 0 32px 120px rgba(0, 95, 255, 0.22);
     }
 
     * {
@@ -33,11 +38,12 @@
 
     body {
       margin: 0;
+      min-height: 100vh;
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at 20% 10%, rgba(0, 132, 255, 0.26), transparent 32rem),
-        radial-gradient(circle at 80% 20%, rgba(48, 209, 88, 0.10), transparent 28rem),
-        radial-gradient(circle at 50% 90%, rgba(10, 132, 255, 0.16), transparent 34rem),
+        radial-gradient(circle at 20% 12%, rgba(10, 132, 255, 0.24), transparent 34rem),
+        radial-gradient(circle at 82% 22%, rgba(48, 209, 88, 0.10), transparent 30rem),
+        radial-gradient(circle at 50% 88%, rgba(10, 132, 255, 0.14), transparent 34rem),
         var(--bg);
       color: var(--text);
     }
@@ -47,34 +53,38 @@
       text-decoration: none;
     }
 
+    img {
+      max-width: 100%;
+    }
+
     .page {
-      width: min(1160px, calc(100% - 40px));
-      margin: 0 auto;
+      width: min(var(--max), calc(100% - 48px));
+      margin-inline: auto;
     }
 
     header {
       position: sticky;
       top: 0;
       z-index: 20;
-      backdrop-filter: blur(22px);
-      background: rgba(5, 6, 7, 0.72);
+      background: rgba(5, 6, 7, 0.78);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(22px);
     }
 
     .nav {
+      height: 72px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 18px 0;
     }
 
     .brand {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 10px;
-      font-weight: 800;
-      letter-spacing: -0.03em;
+      gap: 11px;
       font-size: 22px;
+      font-weight: 850;
+      letter-spacing: -0.04em;
     }
 
     .brand-mark {
@@ -83,18 +93,20 @@
       border-radius: 10px;
       display: grid;
       place-items: center;
-      background: linear-gradient(145deg, #0a84ff, #00c7ff);
+      color: white;
+      background: linear-gradient(145deg, #4fa9ff, #0a84ff);
       box-shadow: 0 0 32px rgba(10, 132, 255, 0.42);
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 900;
     }
 
     .nav-links {
       display: flex;
-      gap: 18px;
+      align-items: center;
+      gap: 22px;
       color: var(--muted);
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 750;
     }
 
     .nav-links a:hover {
@@ -102,41 +114,44 @@
     }
 
     .hero {
+      min-height: calc(100vh - 72px);
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 46px;
+      grid-template-columns: minmax(0, 1fr) minmax(340px, 480px);
+      gap: 72px;
       align-items: center;
-      padding: 78px 0 56px;
+      padding: 76px 0 64px;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      color: var(--blue);
-      background: var(--blue-soft);
-      border: 1px solid rgba(10, 132, 255, 0.28);
-      padding: 8px 12px;
+      margin-bottom: 22px;
+      padding: 8px 13px;
       border-radius: 999px;
-      font-weight: 800;
+      color: #7dbdff;
+      background: var(--blue-soft);
+      border: 1px solid rgba(10, 132, 255, 0.30);
       font-size: 14px;
-      margin-bottom: 24px;
+      font-weight: 850;
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(52px, 8vw, 96px);
-      line-height: 0.94;
+      max-width: 790px;
+      font-size: clamp(46px, 6.4vw, 82px);
+      line-height: 0.98;
       letter-spacing: -0.075em;
-      max-width: 820px;
     }
 
     .hero-copy {
-      margin: 24px 0 0;
+      margin: 26px 0 0;
+      max-width: 720px;
       color: var(--muted);
-      font-size: clamp(18px, 2.1vw, 24px);
-      line-height: 1.42;
-      max-width: 650px;
+      font-size: clamp(19px, 2.05vw, 26px);
+      line-height: 1.36;
+      font-weight: 620;
+      letter-spacing: -0.025em;
     }
 
     .hero-actions {
@@ -147,33 +162,37 @@
     }
 
     .button {
+      min-height: 50px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 48px;
-      padding: 0 20px;
+      padding: 0 22px;
       border-radius: 999px;
-      font-weight: 800;
-      border: 1px solid var(--panel-border);
-      background: var(--panel);
+      border: 1px solid var(--border);
+      background: var(--surface);
       color: var(--text);
+      font-weight: 850;
+      box-shadow: 0 12px 50px rgba(0, 0, 0, 0.18);
     }
 
     .button.primary {
-      background: #0a84ff;
-      border-color: #0a84ff;
+      background: var(--blue);
+      border-color: var(--blue);
       color: white;
-      box-shadow: 0 16px 50px rgba(10, 132, 255, 0.34);
+      box-shadow: 0 18px 54px rgba(10, 132, 255, 0.34);
     }
 
     .hero-card {
+      width: 100%;
+      max-width: 480px;
+      justify-self: end;
       position: relative;
-      border-radius: 36px;
-      padding: 18px;
+      padding: 12px;
+      border-radius: 34px;
       background:
-        linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.03)),
+        linear-gradient(145deg, rgba(255,255,255,0.13), rgba(255,255,255,0.04)),
         rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--panel-border);
+      border: 1px solid var(--border);
       box-shadow: var(--shadow);
       overflow: hidden;
     }
@@ -181,9 +200,9 @@
     .hero-card::before {
       content: "";
       position: absolute;
-      inset: auto -20% -28% -20%;
+      inset: auto -18% -24% -18%;
       height: 45%;
-      background: radial-gradient(circle, rgba(10, 132, 255, 0.55), transparent 70%);
+      background: radial-gradient(circle, rgba(10, 132, 255, 0.58), transparent 68%);
       filter: blur(28px);
     }
 
@@ -191,61 +210,64 @@
       position: relative;
       display: block;
       width: 100%;
-      border-radius: 26px;
+      height: auto;
+      border-radius: 24px;
     }
 
     .stats {
+      width: min(var(--max), calc(100% - 48px));
+      margin: 0 auto 84px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 14px;
-      margin: 10px 0 70px;
     }
 
     .stat {
-      padding: 22px;
+      min-height: 118px;
+      padding: 24px;
       border-radius: 24px;
-      background: var(--panel);
-      border: 1px solid var(--panel-border);
+      background: var(--surface);
+      border: 1px solid var(--border);
     }
 
     .stat strong {
       display: block;
-      font-size: 30px;
-      letter-spacing: -0.04em;
+      font-size: 32px;
+      line-height: 1;
+      letter-spacing: -0.045em;
     }
 
     .stat span {
       display: block;
-      margin-top: 6px;
+      margin-top: 9px;
       color: var(--muted);
-      font-weight: 600;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.35;
     }
 
     section {
-      padding: 56px 0;
+      padding: 58px 0;
     }
 
     .section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 24px;
-      margin-bottom: 26px;
+      margin-bottom: 28px;
     }
 
     h2 {
       margin: 0;
       font-size: clamp(36px, 5vw, 62px);
       line-height: 1;
-      letter-spacing: -0.06em;
+      letter-spacing: -0.065em;
     }
 
     .section-subtitle {
-      margin: 14px 0 0;
+      margin: 16px 0 0;
+      max-width: 650px;
       color: var(--muted);
-      max-width: 620px;
       font-size: 18px;
       line-height: 1.5;
+      font-weight: 560;
     }
 
     .features {
@@ -256,35 +278,36 @@
 
     .feature {
       min-height: 220px;
-      padding: 24px;
+      padding: 25px;
       border-radius: var(--radius);
-      background: var(--panel);
-      border: 1px solid var(--panel-border);
+      background: var(--surface);
+      border: 1px solid var(--border);
     }
 
     .feature-icon {
       width: 46px;
       height: 46px;
+      margin-bottom: 26px;
       border-radius: 15px;
       display: grid;
       place-items: center;
-      margin-bottom: 28px;
       background: rgba(10, 132, 255, 0.15);
       color: var(--blue);
       font-size: 24px;
+      font-weight: 900;
     }
 
     .feature h3 {
       margin: 0 0 10px;
       font-size: 24px;
-      letter-spacing: -0.035em;
+      letter-spacing: -0.04em;
     }
 
     .feature p {
       margin: 0;
       color: var(--muted);
-      line-height: 1.5;
       font-size: 16px;
+      line-height: 1.5;
     }
 
     .screenshots {
@@ -294,10 +317,10 @@
     }
 
     .shot {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--panel-border);
       border-radius: 30px;
       overflow: hidden;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
       box-shadow: 0 18px 80px rgba(0, 0, 0, 0.34);
     }
 
@@ -317,14 +340,14 @@
       border-radius: 32px;
       background:
         linear-gradient(145deg, rgba(10, 132, 255, 0.18), rgba(255,255,255,0.04)),
-        var(--panel);
+        var(--surface);
       border: 1px solid rgba(10, 132, 255, 0.28);
     }
 
     .callout h3 {
       margin: 0 0 12px;
-      font-size: 28px;
-      letter-spacing: -0.04em;
+      font-size: 29px;
+      letter-spacing: -0.045em;
     }
 
     .callout p {
@@ -342,10 +365,10 @@
     }
 
     footer {
+      margin-top: 42px;
       padding: 46px 0 70px;
       color: var(--soft);
       border-top: 1px solid rgba(255, 255, 255, 0.08);
-      margin-top: 40px;
     }
 
     .footer-row {
@@ -369,21 +392,63 @@
       color: var(--text);
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 980px) {
       .hero {
+        min-height: auto;
         grid-template-columns: 1fr;
-        padding-top: 54px;
+        gap: 38px;
+        padding: 54px 0 42px;
       }
 
-      .stats,
+      .hero-card {
+        justify-self: stretch;
+        max-width: 560px;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 54px;
+      }
+
       .features,
       .screenshots,
       .privacy {
         grid-template-columns: 1fr;
       }
+    }
+
+    @media (max-width: 640px) {
+      .page,
+      .stats {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .nav {
+        height: 64px;
+      }
 
       .nav-links {
         display: none;
+      }
+
+      .hero {
+        padding-top: 40px;
+      }
+
+      h1 {
+        font-size: clamp(42px, 14vw, 64px);
+      }
+
+      .hero-copy {
+        font-size: 18px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 44px 0;
       }
     }
   </style>
@@ -410,10 +475,12 @@
     <section class="page hero">
       <div>
         <div class="eyebrow">Portfolio · Dividends · Cash Activity</div>
-        <h1>See your finances in one clear view.</h1>
+
+        <h1>Bring together scattered finances.</h1>
+
         <p class="hero-copy">
-          Fintify helps self-directed investors organize accounts, holdings, transactions,
-          dividends, cash activity, and passive income across multiple markets.
+          Bring together scattered accounts, markets, holdings, returns, dividends,
+          and cash activities in one clear view.
         </p>
 
         <div class="hero-actions">
@@ -430,7 +497,7 @@
       </div>
     </section>
 
-    <div class="page stats" aria-label="Highlights">
+    <div class="stats" aria-label="Highlights">
       <div class="stat">
         <strong>3</strong>
         <span>Supported market regions</span>
@@ -451,13 +518,11 @@
 
     <section id="features" class="page">
       <div class="section-head">
-        <div>
-          <h2>Built for scattered portfolios.</h2>
-          <p class="section-subtitle">
-            Track accounts, markets, holdings, returns, dividends, and cash activity
-            without connecting your brokerage account.
-          </p>
-        </div>
+        <h2>Built for scattered portfolios.</h2>
+        <p class="section-subtitle">
+          Track accounts, markets, holdings, returns, dividends, and cash activity
+          without connecting your brokerage account.
+        </p>
       </div>
 
       <div class="features">
@@ -519,12 +584,10 @@
 
     <section id="screenshots" class="page">
       <div class="section-head">
-        <div>
-          <h2>Screenshots</h2>
-          <p class="section-subtitle">
-            A closer look at Fintify’s portfolio, dividend, account, and market views.
-          </p>
-        </div>
+        <h2>Screenshots</h2>
+        <p class="section-subtitle">
+          A closer look at Fintify’s portfolio, dividend, account, and market views.
+        </p>
       </div>
 
       <div class="screenshots">
