@@ -23,7 +23,7 @@
       --blue-soft: rgba(10, 132, 255, 0.18);
       --green: #30d158;
       --gold: #d6b84f;
-      --max: 1120px;
+      --max: 1180px;
       --radius: 30px;
       --shadow: 0 32px 120px rgba(0, 95, 255, 0.22);
     }
@@ -41,7 +41,7 @@
       min-height: 100vh;
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at 20% 10%, rgba(10, 132, 255, 0.24), transparent 34rem),
+        radial-gradient(circle at 20% 12%, rgba(10, 132, 255, 0.24), transparent 34rem),
         radial-gradient(circle at 82% 22%, rgba(48, 209, 88, 0.10), transparent 30rem),
         radial-gradient(circle at 50% 88%, rgba(10, 132, 255, 0.14), transparent 34rem),
         var(--bg);
@@ -116,10 +116,10 @@
     .hero {
       min-height: calc(100vh - 72px);
       display: grid;
-      grid-template-columns: minmax(0, 1.04fr) minmax(320px, 0.76fr);
-      gap: 58px;
+      grid-template-columns: minmax(0, 1fr) minmax(340px, 480px);
+      gap: 72px;
       align-items: center;
-      padding: 80px 0 56px;
+      padding: 76px 0 64px;
     }
 
     .eyebrow {
@@ -138,18 +138,18 @@
 
     h1 {
       margin: 0;
-      max-width: 780px;
-      font-size: clamp(48px, 7vw, 94px);
-      line-height: 0.96;
-      letter-spacing: -0.078em;
+      max-width: 790px;
+      font-size: clamp(46px, 6.4vw, 82px);
+      line-height: 0.98;
+      letter-spacing: -0.075em;
     }
 
     .hero-copy {
       margin: 26px 0 0;
-      max-width: 700px;
+      max-width: 720px;
       color: var(--muted);
-      font-size: clamp(19px, 2.05vw, 25px);
-      line-height: 1.38;
+      font-size: clamp(19px, 2.05vw, 26px);
+      line-height: 1.36;
       font-weight: 620;
       letter-spacing: -0.025em;
     }
@@ -182,95 +182,36 @@
       box-shadow: 0 18px 54px rgba(10, 132, 255, 0.34);
     }
 
-    .hero-panel {
+    .hero-card {
+      width: 100%;
+      max-width: 480px;
+      justify-self: end;
       position: relative;
-      padding: 30px;
-      border-radius: 36px;
+      padding: 12px;
+      border-radius: 34px;
       background:
-        linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.035)),
+        linear-gradient(145deg, rgba(255,255,255,0.13), rgba(255,255,255,0.04)),
         rgba(255, 255, 255, 0.04);
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
       overflow: hidden;
     }
 
-    .hero-panel::before {
+    .hero-card::before {
       content: "";
       position: absolute;
-      inset: -40% -20% auto auto;
-      width: 280px;
-      height: 280px;
-      border-radius: 999px;
-      background: rgba(10, 132, 255, 0.34);
-      filter: blur(42px);
+      inset: auto -18% -24% -18%;
+      height: 45%;
+      background: radial-gradient(circle, rgba(10, 132, 255, 0.58), transparent 68%);
+      filter: blur(28px);
     }
 
-    .hero-panel > * {
+    .hero-card img {
       position: relative;
-    }
-
-    .panel-title {
-      font-size: 26px;
-      line-height: 1.08;
-      letter-spacing: -0.045em;
-      font-weight: 850;
-      margin: 0 0 18px;
-    }
-
-    .mini-dashboard {
-      display: grid;
-      gap: 12px;
-    }
-
-    .mini-card {
-      padding: 18px;
-      border-radius: 22px;
-      background: rgba(255, 255, 255, 0.07);
-      border: 1px solid rgba(255, 255, 255, 0.10);
-    }
-
-    .mini-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 18px;
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .mini-value {
-      margin-top: 8px;
-      font-size: 26px;
-      font-weight: 850;
-      letter-spacing: -0.045em;
-    }
-
-    .positive {
-      color: var(--green);
-    }
-
-    .gold {
-      color: var(--gold);
-    }
-
-    .mini-bars {
-      display: grid;
-      gap: 8px;
-      margin-top: 12px;
-    }
-
-    .bar {
-      height: 9px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.10);
-      overflow: hidden;
-    }
-
-    .bar span {
       display: block;
-      height: 100%;
-      border-radius: 999px;
-      background: linear-gradient(90deg, #0a84ff, #30d158);
+      width: 100%;
+      height: auto;
+      border-radius: 24px;
     }
 
     .stats {
@@ -459,6 +400,11 @@
         padding: 54px 0 42px;
       }
 
+      .hero-card {
+        justify-self: stretch;
+        max-width: 560px;
+      }
+
       .stats {
         grid-template-columns: repeat(2, 1fr);
         margin-bottom: 54px;
@@ -543,49 +489,12 @@
         </div>
       </div>
 
-      <aside class="hero-panel" aria-label="Fintify highlights">
-        <p class="panel-title">A clear lens for your portfolio and passive income.</p>
-
-        <div class="mini-dashboard">
-          <div class="mini-card">
-            <div class="mini-row">
-              <span>Portfolio value</span>
-              <span>Today</span>
-            </div>
-            <div class="mini-row">
-              <div class="mini-value">C$540K</div>
-              <div class="mini-value positive">+C$1.64K</div>
-            </div>
-            <div class="mini-bars">
-              <div class="bar"><span style="width: 72%"></span></div>
-            </div>
-          </div>
-
-          <div class="mini-card">
-            <div class="mini-row">
-              <span>Dividend income</span>
-              <span>Next 12 months</span>
-            </div>
-            <div class="mini-value gold">C$10.1K</div>
-            <div class="mini-bars">
-              <div class="bar"><span style="width: 48%"></span></div>
-              <div class="bar"><span style="width: 82%"></span></div>
-              <div class="bar"><span style="width: 58%"></span></div>
-            </div>
-          </div>
-
-          <div class="mini-card">
-            <div class="mini-row">
-              <span>Accounts</span>
-              <span>Markets</span>
-            </div>
-            <div class="mini-row">
-              <div class="mini-value">6</div>
-              <div class="mini-value">US · CA · CN</div>
-            </div>
-          </div>
-        </div>
-      </aside>
+      <div class="hero-card">
+        <img
+          src="assets/screenshots/06_See_Your_Finances_in_One_View.png"
+          alt="Fintify summary dashboard showing portfolio, dividend, and account summaries"
+        />
+      </div>
     </section>
 
     <div class="stats" aria-label="Highlights">
