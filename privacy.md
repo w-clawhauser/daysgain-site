@@ -5,8 +5,8 @@ lang: en
 current_language: English
 alternate_label: 中文
 alternate_lang: zh-Hans
-alternate_url: /fintify-site/zh/privacy/
-home_url: /fintify-site/
+alternate_url: /zh/privacy/
+home_url: /
 ---
 
 # Fintify Privacy Policy

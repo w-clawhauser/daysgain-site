@@ -5,8 +5,8 @@ lang: zh-Hans
 current_language: 中文
 alternate_label: English
 alternate_lang: en
-alternate_url: /fintify-site/csv-import-guide/
-home_url: /fintify-site/zh/
+alternate_url: /csv-import-guide/
+home_url: /zh/
 ---
 
 # Fintify CSV 导入指南

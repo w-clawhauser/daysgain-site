@@ -5,8 +5,8 @@ lang: zh-Hans
 current_language: 中文
 alternate_label: English
 alternate_lang: en
-alternate_url: /fintify-site/terms/
-home_url: /fintify-site/zh/
+alternate_url: /terms/
+home_url: /zh/
 ---
 
 # Fintify 条款与免责声明

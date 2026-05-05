@@ -5,8 +5,8 @@ lang: en
 current_language: English
 alternate_label: 中文
 alternate_lang: zh-Hans
-alternate_url: /fintify-site/zh/support/
-home_url: /fintify-site/
+alternate_url: /zh/support/
+home_url: /
 ---
 
 # Fintify Support
@@ -58,7 +58,7 @@ Fintify supports CSV import so you can bring your transaction history into the a
 
 See the CSV Import Guide for formatting requirements and examples:
 
-[CSV Import Guide](https://w-clawhauser.github.io/fintify-site/csv-import-guide/)
+[CSV Import Guide](https://fintify.ca/csv-import-guide/)
 
 ### CSV Export
 
@@ -84,7 +84,7 @@ Fintify is designed as a local-first app. Your portfolio records are stored on y
 
 Read the Privacy Policy:
 
-[Privacy Policy](https://w-clawhauser.github.io/fintify-site/privacy/)
+[Privacy Policy](https://fintify.ca/privacy/)
 
 ### Terms and Disclaimer
 
@@ -92,10 +92,10 @@ Fintify is for personal tracking, organization, and informational purposes only.
 
 Read the Terms and Disclaimer:
 
-[Terms and Disclaimer](https://w-clawhauser.github.io/fintify-site/terms/)
+[Terms and Disclaimer](https://fintify.ca/terms/)
 
 ## Useful Links
 
-- [Privacy Policy](https://w-clawhauser.github.io/fintify-site/privacy/)
-- [Terms and Disclaimer](https://w-clawhauser.github.io/fintify-site/terms/)
-- [CSV Import Guide](https://w-clawhauser.github.io/fintify-site/csv-import-guide/)
+- [Privacy Policy](https://fintify.ca/privacy/)
+- [Terms and Disclaimer](https://fintify.ca/terms/)
+- [CSV Import Guide](https://fintify.ca/csv-import-guide/)
