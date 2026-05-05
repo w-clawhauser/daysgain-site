@@ -710,6 +710,10 @@ layout: null
   </footer>
 
   <script>
+    document.querySelectorAll('a[href*="/fintify-site/"]').forEach((link) => {
+      link.setAttribute('href', link.getAttribute('href').replace('/fintify-site/', '/'));
+    });
+
     document.querySelectorAll('a[href]:not([href^="#"]):not([data-same-tab])').forEach((link) => {
       link.target = "_blank";
       link.rel = "noopener noreferrer";
