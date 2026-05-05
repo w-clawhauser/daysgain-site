@@ -6,6 +6,18 @@ Fintify is a personal portfolio and dividend tracking app designed to help users
 
 By using Fintify, you agree to the following terms and disclaimers.
 
+## Important Information
+
+Fintify is an independently developed personal tracking and information organization tool. Fintify is not affiliated with, endorsed by, sponsored by, or authorized by any brokerage, exchange, ETF issuer, listed company, market data provider, financial institution, or government agency.
+
+Any stock tickers, company names, ETF names, market identifiers, account labels, or broker labels shown in screenshots, demo data, or sample records are used only as illustrative examples of records that users may manually track. They do not imply any partnership, authorization, endorsement, recommendation, brokerage service, or trading service.
+
+Fintify is built for personal tracking, organization, and informational purposes only. It does not provide financial advice, investment recommendations, tax advice, legal advice, brokerage services, or trading services.
+
+Fintify is not a tax filing or tax advisory tool and does not determine your official TFSA, RRSP, or other contribution room. Please verify contribution limits, tax records, and important financial information with CRA, your brokerage, financial institution, tax advisor, or other qualified professional.
+
+Market data, dividends, exchange rates, and calculations may be delayed, incomplete, unavailable, or inaccurate.
+
 ## 1. Informational Purposes Only
 
 Fintify is provided for personal tracking, organization, and informational purposes only.
