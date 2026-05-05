@@ -19,7 +19,7 @@ Fintify is a personal portfolio and dividend tracking app designed to help users
 
 For questions, feedback, or bug reports, contact us at:
 
-**fintify.support@gmail.com**
+**support@fintify.ca**
 
 When reporting an issue, please include as much of the following information as possible:
 

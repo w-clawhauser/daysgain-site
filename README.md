@@ -21,7 +21,7 @@ Fintify helps you see through scattered accounts, markets, holdings, returns, an
 
 For questions, feedback, or bug reports, please contact:
 
-**fintify.support@gmail.com**
+**support@fintify.ca**
 
 ## What Fintify Helps Track
 

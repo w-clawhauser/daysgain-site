@@ -95,4 +95,4 @@ Fintify 并非面向儿童设计。我们不会有意收集儿童的个人信息
 
 如对本隐私政策有任何问题，请联系：
 
-**fintify.support@gmail.com**
+**support@fintify.ca**

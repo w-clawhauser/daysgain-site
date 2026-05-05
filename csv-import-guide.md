@@ -236,7 +236,7 @@ Fintify is designed as a local-first app. Your portfolio records are stored on y
 
 If you run into issues or have questions, contact us at:
 
-**fintify.support@gmail.com**
+**support@fintify.ca**
 
 When reporting an import issue, please include:
 

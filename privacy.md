@@ -122,4 +122,4 @@ If we make material changes, we will update the effective date and publish the r
 
 If you have questions about this Privacy Policy, please contact:
 
-**fintify.support@gmail.com**
+**support@fintify.ca**

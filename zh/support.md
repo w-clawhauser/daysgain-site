@@ -19,7 +19,7 @@ Fintify 是一款个人投资组合和分红追踪应用，帮助用户整理投
 
 如有问题、反馈或错误报告，请发送邮件至：
 
-**fintify.support@gmail.com**
+**support@fintify.ca**
 
 报告问题时，请尽量提供以下信息：
 

@@ -111,4 +111,4 @@ Your continued use of Fintify after changes are made means you accept the update
 
 If you have questions about these Terms and Disclaimer, contact us at:
 
-**[fintify.support@gmail.com]**
+**[support@fintify.ca]**

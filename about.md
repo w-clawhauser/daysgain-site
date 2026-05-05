@@ -136,4 +136,4 @@ Market data, dividends, exchange rates, and calculations may be delayed, incompl
 
 For questions, feedback, or bug reports, please contact:
 
-**fintify.support@gmail.com**
+**support@fintify.ca**

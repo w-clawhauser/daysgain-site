@@ -125,4 +125,4 @@ Fintify 采用本地优先设计。你的投资记录默认保存在设备本地
 
 如有问题、反馈或错误报告，请联系：
 
-**fintify.support@gmail.com**
+**support@fintify.ca**

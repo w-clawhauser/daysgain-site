@@ -117,4 +117,4 @@ Fintify 采用本地优先设计。你的投资记录默认保存在设备本地
 
 如对本条款有任何问题，请联系：
 
-**fintify.support@gmail.com**
+**support@fintify.ca**
