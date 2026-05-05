@@ -501,7 +501,7 @@ layout: null
         <a href="#screenshots">截图</a>
         <a href="/fintify-site/zh/support/" target="_blank" rel="noopener noreferrer">支持</a>
         <a href="/fintify-site/zh/privacy/" target="_blank" rel="noopener noreferrer">隐私</a>
-        <a class="language-link" href="/fintify-site/" target="_blank" rel="noopener noreferrer" hreflang="en" lang="en">English</a>
+        <a class="language-link" href="/fintify-site/" data-same-tab hreflang="en" lang="en">English</a>
       </nav>
     </div>
   </header>
@@ -704,13 +704,13 @@ layout: null
         <a href="/fintify-site/zh/terms/" target="_blank" rel="noopener noreferrer">条款</a>
         <a href="/fintify-site/zh/support/" target="_blank" rel="noopener noreferrer">支持</a>
         <a href="/fintify-site/zh/csv-import-guide/" target="_blank" rel="noopener noreferrer">CSV 导入指南</a>
-        <a href="/fintify-site/" target="_blank" rel="noopener noreferrer" hreflang="en" lang="en">English</a>
+        <a href="/fintify-site/" data-same-tab hreflang="en" lang="en">English</a>
       </div>
     </div>
   </footer>
 
   <script>
-    document.querySelectorAll('a[href]:not([href^="#"])').forEach((link) => {
+    document.querySelectorAll('a[href]:not([href^="#"]):not([data-same-tab])').forEach((link) => {
       link.target = "_blank";
       link.rel = "noopener noreferrer";
     });

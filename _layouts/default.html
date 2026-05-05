@@ -194,7 +194,7 @@
       {% if page.alternate_url %}
       <div class="language-switch" aria-label="Language switcher">
         <span>{{ page.current_language | default: 'English' }}</span>
-        <a href="{{ page.alternate_url }}" target="_blank" rel="noopener noreferrer">{{ page.alternate_label }}</a>
+        <a href="{{ page.alternate_url }}" data-same-tab>{{ page.alternate_label }}</a>
       </div>
       {% endif %}
     </div>
@@ -205,7 +205,7 @@
   </main>
 
   <script>
-    document.querySelectorAll('a[href]:not([href^="#"])').forEach((link) => {
+    document.querySelectorAll('a[href]:not([href^="#"]):not([data-same-tab])').forEach((link) => {
       link.target = "_blank";
       link.rel = "noopener noreferrer";
     });
