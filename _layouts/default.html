@@ -38,11 +38,7 @@
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 11px;
       color: #24292f;
-      font-size: 22px;
-      font-weight: 850;
-      letter-spacing: -0.04em;
       text-decoration: none;
     }
 
@@ -50,18 +46,12 @@
       text-decoration: none;
     }
 
-    .brand-mark {
-      width: 34px;
-      height: 34px;
-      border-radius: 10px;
-      display: grid;
-      place-items: center;
-      color: #ffffff;
-      background: linear-gradient(145deg, #4fa9ff, #0a84ff);
-      box-shadow: 0 0 32px rgba(10, 132, 255, 0.34);
-      font-size: 17px;
-      font-weight: 900;
-      letter-spacing: 0;
+    .brand-logo {
+      display: block;
+      width: 136px;
+      height: 38px;
+      object-fit: cover;
+      object-position: center;
     }
 
     .language-switch {
@@ -190,8 +180,7 @@
   <header>
     <div class="topbar">
       <a class="brand" href="{{ page.home_url | default: '/' }}" target="_blank" rel="noopener noreferrer">
-        <span class="brand-mark">F</span>
-        <span>Fintify</span>
+        <img class="brand-logo" src="/assets/brand/fintify-logo-light.png" alt="Fintify">
       </a>
       {% if page.alternate_url %}
       <div class="language-switch" aria-label="Language switcher">

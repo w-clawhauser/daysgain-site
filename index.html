@@ -86,23 +86,14 @@
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 11px;
-      font-size: 22px;
-      font-weight: 850;
-      letter-spacing: -0.04em;
     }
 
-    .brand-mark {
-      width: 34px;
-      height: 34px;
-      border-radius: 10px;
-      display: grid;
-      place-items: center;
-      color: white;
-      background: linear-gradient(145deg, #4fa9ff, #0a84ff);
-      box-shadow: 0 0 32px rgba(10, 132, 255, 0.42);
-      font-size: 17px;
-      font-weight: 900;
+    .brand-logo {
+      display: block;
+      width: 142px;
+      height: 40px;
+      object-fit: cover;
+      object-position: center;
     }
 
     .nav-links {
@@ -488,8 +479,7 @@
   <header>
     <div class="page nav">
       <a class="brand" href="/" target="_blank" rel="noopener noreferrer">
-        <span class="brand-mark">F</span>
-        <span>Fintify</span>
+        <img class="brand-logo" src="assets/brand/fintify-logo-dark.png" alt="Fintify">
       </a>
 
       <nav class="nav-links" aria-label="Primary navigation">
