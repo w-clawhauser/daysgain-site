@@ -1,6 +1,6 @@
 # Fintify Terms and Disclaimer
 
-**Effective Date:** [Month Day, Year]
+**Effective Date:** [May 1, 2026]
 
 Fintify is a personal portfolio and dividend tracking app designed to help users organize investment records, monitor portfolio value, track dividends, and view estimated passive income.
 
