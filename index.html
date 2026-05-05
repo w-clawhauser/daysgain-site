@@ -8,6 +8,8 @@
     name="description"
     content="Bring together scattered accounts, markets, holdings, returns, dividends, and cash activities in one clear view."
   />
+  <link rel="alternate" hreflang="en" href="https://w-clawhauser.github.io/fintify-site/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://w-clawhauser.github.io/fintify-site/zh/" />
   <link rel="icon" type="image/png" href="assets/icons/favicon.png" />
   <link rel="apple-touch-icon" href="assets/icons/favicon.png" />
   <meta name="theme-color" content="#0a84ff" />
@@ -106,7 +108,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 18px;
       color: var(--muted);
       font-size: 14px;
       font-weight: 750;
@@ -114,6 +116,19 @@
 
     .nav-links a:hover {
       color: var(--text);
+    }
+
+    .language-link {
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+    }
+
+    .language-link:hover {
+      border-color: rgba(255, 255, 255, 0.28);
+      background: var(--surface-strong);
     }
 
     .hero {
@@ -431,6 +446,11 @@
       }
 
       .nav-links {
+        display: flex;
+        gap: 0;
+      }
+
+      .nav-links a:not(.language-link) {
         display: none;
       }
 
@@ -470,6 +490,7 @@
         <a href="#screenshots">Screenshots</a>
         <a href="support">Support</a>
         <a href="privacy">Privacy</a>
+        <a class="language-link" href="/fintify-site/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a>
       </nav>
     </div>
   </header>
@@ -681,6 +702,7 @@
         <a href="terms">Terms</a>
         <a href="support">Support</a>
         <a href="csv-import-guide">CSV Import Guide</a>
+        <a href="/fintify-site/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a>
       </div>
     </div>
   </footer>

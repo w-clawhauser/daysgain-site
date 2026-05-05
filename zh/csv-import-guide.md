@@ -1,6 +1,12 @@
 ---
 title: Fintify CSV 导入指南
 permalink: /zh/csv-import-guide/
+lang: zh-Hans
+current_language: 中文
+alternate_label: English
+alternate_lang: en
+alternate_url: /fintify-site/csv-import-guide/
+home_url: /fintify-site/zh/
 ---
 
 # Fintify CSV 导入指南
@@ -120,4 +126,3 @@ Fintify 采用本地优先设计。你的投资记录默认保存在设备本地
 如有问题、反馈或错误报告，请联系：
 
 **fintify.support@gmail.com**
-

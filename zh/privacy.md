@@ -1,6 +1,12 @@
 ---
 title: Fintify 隐私政策
 permalink: /zh/privacy/
+lang: zh-Hans
+current_language: 中文
+alternate_label: English
+alternate_lang: en
+alternate_url: /fintify-site/privacy/
+home_url: /fintify-site/zh/
 ---
 
 # Fintify 隐私政策
@@ -90,4 +96,3 @@ Fintify 并非面向儿童设计。我们不会有意收集儿童的个人信息
 如对本隐私政策有任何问题，请联系：
 
 **fintify.support@gmail.com**
-

@@ -1,3 +1,14 @@
+---
+title: Fintify Support
+permalink: /support/
+lang: en
+current_language: English
+alternate_label: 中文
+alternate_lang: zh-Hans
+alternate_url: /fintify-site/zh/support/
+home_url: /fintify-site/
+---
+
 # Fintify Support
 
 Welcome to Fintify Support.

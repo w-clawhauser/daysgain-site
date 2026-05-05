@@ -1,6 +1,12 @@
 ---
 title: Fintify 支持与常见问题
 permalink: /zh/support/
+lang: zh-Hans
+current_language: 中文
+alternate_label: English
+alternate_lang: en
+alternate_url: /fintify-site/support/
+home_url: /fintify-site/zh/
 ---
 
 # Fintify 支持
@@ -93,4 +99,3 @@ Fintify 仅用于个人记录、整理和信息展示。Fintify 不提供金融�
 - [隐私政策](https://w-clawhauser.github.io/fintify-site/zh/privacy/)
 - [条款与免责声明](https://w-clawhauser.github.io/fintify-site/zh/terms/)
 - [CSV 导入指南](https://w-clawhauser.github.io/fintify-site/zh/csv-import-guide/)
-

@@ -1,3 +1,14 @@
+---
+title: About Fintify
+permalink: /about/
+lang: en
+current_language: English
+alternate_label: 中文
+alternate_lang: zh-Hans
+alternate_url: /fintify-site/zh/
+home_url: /fintify-site/
+---
+
 # About Fintify
 
 Fintify is a personal portfolio and passive income tracking app designed for self-directed investors who want a clearer view of their financial picture.

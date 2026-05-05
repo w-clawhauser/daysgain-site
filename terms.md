@@ -1,3 +1,14 @@
+---
+title: Fintify Terms and Disclaimer
+permalink: /terms/
+lang: en
+current_language: English
+alternate_label: 中文
+alternate_lang: zh-Hans
+alternate_url: /fintify-site/zh/terms/
+home_url: /fintify-site/
+---
+
 # Fintify Terms and Disclaimer
 
 **Effective Date:** [Apr 27, 2026]

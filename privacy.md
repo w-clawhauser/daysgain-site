@@ -1,3 +1,14 @@
+---
+title: Fintify Privacy Policy
+permalink: /privacy/
+lang: en
+current_language: English
+alternate_label: 中文
+alternate_lang: zh-Hans
+alternate_url: /fintify-site/zh/privacy/
+home_url: /fintify-site/
+---
+
 # Fintify Privacy Policy
 
 **Effective Date:** April 27, 2026

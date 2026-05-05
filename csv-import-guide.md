@@ -1,3 +1,14 @@
+---
+title: Fintify CSV Import Guide
+permalink: /csv-import-guide/
+lang: en
+current_language: English
+alternate_label: 中文
+alternate_lang: zh-Hans
+alternate_url: /fintify-site/zh/csv-import-guide/
+home_url: /fintify-site/
+---
+
 # Fintify CSV Import Guide
 
 Fintify supports CSV import so you can bring investment and cash activity records into the app.
