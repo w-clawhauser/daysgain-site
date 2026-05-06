@@ -1,39 +1,40 @@
 ---
-title: About Fintify
+title: About DaysGain
 permalink: /about/
 lang: en
 current_language: English
 alternate_label: 中文
 alternate_lang: zh-Hans
-alternate_url: /zh/
-home_url: /
+alternate_url: ../zh/
+home_url: ../
+asset_prefix: ../
 ---
 
-# About Fintify
+# About DaysGain
 
-Fintify is a personal portfolio and passive income tracking app designed for self-directed investors who want a clearer view of their financial picture.
+DaysGain is a personal portfolio and passive income tracking app designed for self-directed investors who want a clearer view of their financial picture.
 
-Fintify helps you see through scattered accounts, markets, holdings, returns, and dividend income in one clear view.
+DaysGain helps you see through scattered accounts, markets, holdings, returns, and dividend income in one clear view.
 
-## Why I Built Fintify
+## Why I Built DaysGain
 
-Fintify started as a personal tool.
+DaysGain started as a personal tool.
 
 As someone who enjoys stock investing and also works in technology, I wanted a better way to understand my own portfolio beyond just checking prices. I cared not only about what I owned, but also how my investments were performing, how much dividend income they generated, and how my accounts were organized across different markets and brokerages.
 
 Living in Canada also made portfolio tracking more fragmented. Investments can be spread across TFSA, RRSP, and non-registered accounts, sometimes across more than one brokerage, and often across both Canadian and US markets. Deposit and withdrawal records also matter, especially when reviewing contribution history for registered accounts.
 
-Before building Fintify, I found myself relying on different tools for different questions: one place for market prices, another place for dividend tracking, and spreadsheets for personal records. That worked for a while, but it was not the clear, unified view I wanted.
+Before building DaysGain, I found myself relying on different tools for different questions: one place for market prices, another place for dividend tracking, and spreadsheets for personal records. That worked for a while, but it was not the clear, unified view I wanted.
 
-So I built Fintify to bring these pieces together.
+So I built DaysGain to bring these pieces together.
 
-Fintify also reflects a family use case. As a Chinese Canadian investor, I wanted one place to track Canadian and US investments, while also helping my mother keep a clearer record of her stock investments and dividend income in China. This is one reason Fintify includes support for China A-share securities alongside US and Canadian markets.
+DaysGain also reflects a family use case. As a Chinese Canadian investor, I wanted one place to track Canadian and US investments, while also helping my mother keep a clearer record of her stock investments and dividend income in China. This is one reason DaysGain includes support for China A-share securities alongside US and Canadian markets.
 
-Fintify is designed to help turn scattered investment records into a clearer picture of portfolio value, returns, dividends, passive income, account structure, and personal contribution records.
+DaysGain is designed to help turn scattered investment records into a clearer picture of portfolio value, returns, dividends, passive income, account structure, and personal contribution records.
 
-## What Fintify Helps Track
+## What DaysGain Helps Track
 
-Fintify helps you track:
+DaysGain helps you track:
 
 - Portfolio value
 - Holdings
@@ -50,9 +51,9 @@ Fintify helps you track:
 - Multiple markets and currencies
 - Dividend and stock split events when available from market data providers
 
-## Who Fintify Is For
+## Who DaysGain Is For
 
-Fintify is designed for people who manage their own investment records and want better visibility across accounts and markets.
+DaysGain is designed for people who manage their own investment records and want better visibility across accounts and markets.
 
 It may be useful if you:
 
@@ -101,32 +102,32 @@ View dividend and stock split events when available from market data providers.
 
 ### Local-First Design
 
-Fintify does not require a brokerage login.
+DaysGain does not require a brokerage login.
 
 Your portfolio records are stored on your device unless you choose to export or share them.
 
 ## Data and Privacy
 
-Fintify is designed as a local-first app.
+DaysGain is designed as a local-first app.
 
 Your portfolio records are stored on your device using local app storage unless you choose to export, share, or otherwise provide them outside the app.
 
-Fintify may request market data for securities you add, such as prices, historical prices, dividends, exchange rates, security metadata, and corporate actions.
+DaysGain may request market data for securities you add, such as prices, historical prices, dividends, exchange rates, security metadata, and corporate actions.
 
-Fintify does not require a Fintify account and does not connect to your brokerage account.
+DaysGain does not require a DaysGain account and does not connect to your brokerage account.
 
 Read more:
 
-- [Privacy Policy](privacy.md)
-- [Terms and Disclaimer](terms.md)
+- [Privacy Policy](../privacy)
+- [Terms and Disclaimer](../terms)
 
 ## Important Disclaimer
 
-Fintify is built for personal tracking, organization, and informational purposes only.
+DaysGain is built for personal tracking, organization, and informational purposes only.
 
-Fintify does not provide financial advice, investment recommendations, tax advice, legal advice, brokerage services, portfolio management services, or trading services.
+DaysGain does not provide financial advice, investment recommendations, tax advice, legal advice, brokerage services, portfolio management services, or trading services.
 
-Fintify is not a tax filing or tax advisory tool and does not determine your official TFSA, RRSP, or other contribution room.
+DaysGain is not a tax filing or tax advisory tool and does not determine your official TFSA, RRSP, or other contribution room.
 
 Please verify contribution limits, tax records, market data, portfolio values, and important financial information with CRA, your brokerage, financial institution, tax advisor, or other qualified professional.
 
@@ -136,4 +137,4 @@ Market data, dividends, exchange rates, and calculations may be delayed, incompl
 
 For questions, feedback, or bug reports, please contact:
 
-**support@fintify.ca**
+**daysgain.app@gmail.com**

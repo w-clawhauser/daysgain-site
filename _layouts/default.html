@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | default: site.title }}</title>
-  <link rel="icon" type="image/png" href="/assets/icons/fintify.png">
-  <link rel="apple-touch-icon" href="/assets/icons/fintify.png">
+  <link rel="icon" type="image/png" href="{{ page.asset_prefix | default: "" }}assets/icons/daysgain.png">
+  <link rel="apple-touch-icon" href="{{ page.asset_prefix | default: "" }}assets/icons/daysgain.png">
   {% if page.alternate_url %}
-  <link rel="alternate" hreflang="{{ page.lang | default: 'en' }}" href="https://fintify.ca{{ page.url }}">
-  <link rel="alternate" hreflang="{{ page.alternate_lang | default: 'en' }}" href="https://fintify.ca{{ page.alternate_url }}">
+  <link rel="alternate" hreflang="{{ page.lang | default: 'en' }}" href="{{ page.url }}">
+  <link rel="alternate" hreflang="{{ page.alternate_lang | default: 'en' }}" href="{{ page.alternate_url }}">
   {% endif %}
   <style>
     body {
@@ -50,7 +50,7 @@
       display: block;
       width: 136px;
       height: 38px;
-      object-fit: cover;
+      object-fit: contain;
       object-position: center;
     }
 
@@ -179,8 +179,8 @@
 <body>
   <header>
     <div class="topbar">
-      <a class="brand" href="{{ page.home_url | default: '/' }}" target="_blank" rel="noopener noreferrer">
-        <img class="brand-logo" src="/assets/brand/fintify-logo-light.png" alt="Fintify">
+      <a class="brand" href="{{ page.home_url | default: "./" }}" target="_blank" rel="noopener noreferrer">
+        <img class="brand-logo" src="{{ page.asset_prefix | default: "" }}assets/brand/daysgain-logo-light.png" alt="DaysGain">
       </a>
       {% if page.alternate_url %}
       <div class="language-switch" aria-label="Language switcher">
@@ -196,10 +196,6 @@
   </main>
 
   <script>
-    document.querySelectorAll('a[href*="/fintify-site/"]').forEach((link) => {
-      link.setAttribute('href', link.getAttribute('href').replace('/fintify-site/', '/'));
-    });
-
     document.querySelectorAll('a[href]:not([href^="#"]):not([data-same-tab])').forEach((link) => {
       link.target = "_blank";
       link.rel = "noopener noreferrer";

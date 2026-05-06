@@ -1,41 +1,42 @@
 ---
-title: Fintify CSV Import Guide
+title: DaysGain CSV Import Guide
 permalink: /csv-import-guide/
 lang: en
 current_language: English
 alternate_label: 中文
 alternate_lang: zh-Hans
-alternate_url: /zh/csv-import-guide/
-home_url: /
+alternate_url: ../zh/csv-import-guide
+home_url: ../
+asset_prefix: ../
 ---
 
-# Fintify CSV Import Guide
+# DaysGain CSV Import Guide
 
-Fintify supports CSV import so you can bring investment and cash activity records into the app.
+DaysGain supports CSV import so you can bring investment and cash activity records into the app.
 
 CSV import is designed for users who want to migrate existing transaction history, restore data from a backup, or manage records in a spreadsheet.
 
 ## The Easiest Way to Start
 
-The safest way to create a correctly formatted CSV file is to export your data from Fintify first, then use the exported file as your template.
+The safest way to create a correctly formatted CSV file is to export your data from DaysGain first, then use the exported file as your template.
 
 Recommended workflow:
 
-1. Go to **Settings → Export CSV** in Fintify.
+1. Go to **Settings → Export CSV** in DaysGain.
 2. Open the exported file in a spreadsheet app.
 3. Add, edit, or append rows using the same column format.
 4. Save the file as CSV.
-5. Import the updated CSV back into Fintify.
+5. Import the updated CSV back into DaysGain.
 
 If you are starting fresh with no existing data, follow the format described below.
 
 ## One CSV Format
 
-Fintify uses one CSV format for both import and export.
+DaysGain uses one CSV format for both import and export.
 
 Your CSV file must include a header row.
 
-The standard Fintify CSV header is:
+The standard DaysGain CSV header is:
 
 ```csv
 source_record_id,date,activity_category,type,account_name,owner_name,account_type,institution,ticker,api_symbol,security_name,market,currency,quantity,price,cash_amount,fee,notes,counterparty_account_name
@@ -43,14 +44,14 @@ source_record_id,date,activity_category,type,account_name,owner_name,account_typ
 
 ## What You Can Import
 
-Fintify CSV import supports:
+DaysGain CSV import supports:
 
 - Buy transactions
 - Sell transactions
 - Deposits
 - Withdrawals
 
-Dividend and split events are not imported manually through CSV. Fintify retrieves dividend and split data from market data providers when available.
+Dividend and split events are not imported manually through CSV. DaysGain retrieves dividend and split data from market data providers when available.
 
 ## Required Core Columns
 
@@ -139,7 +140,7 @@ wdr-2024-07-01,2024-07-01,transfer,withdraw,WD-TFSA-Questrade,WD,TFSA,Questrade,
 
 ## Ticker, API Symbol, and Market Detection
 
-Fintify separates the display ticker from the market data symbol.
+DaysGain separates the display ticker from the market data symbol.
 
 | Field | Purpose | Example |
 |---|---|---|
@@ -147,7 +148,7 @@ Fintify separates the display ticker from the market data symbol.
 | `api_symbol` | The symbol used for market data lookup | `ENB.TO` |
 | `market` | Optional market hint | `canada` |
 
-Fintify determines the market using this priority:
+DaysGain determines the market using this priority:
 
 1. `api_symbol`, if provided.
 2. `market`, if `api_symbol` is blank.
@@ -186,7 +187,7 @@ wdr-2024-07-01,2024-07-01,transfer,withdraw,WD-TFSA-Questrade,WD,TFSA,Questrade,
 
 ## Starting Without Complete History
 
-You do not need every historical trade to start using Fintify.
+You do not need every historical trade to start using DaysGain.
 
 If you already hold a position but do not have the full transaction history, add one initial buy row using your current share count and average cost.
 
@@ -197,7 +198,7 @@ source_record_id,date,activity_category,type,account_name,owner_name,account_typ
 initial-msft,2026-04-28,transaction,buy,WD-RRSP-Questrade,WD,RRSP,Questrade,MSFT,MSFT,Microsoft Corp.,us,USD,50,320.00,,0,Initial holding based on average cost,
 ```
 
-Fintify will track your position from this date forward. Gain/loss before this date will not reflect your actual history.
+DaysGain will track your position from this date forward. Gain/loss before this date will not reflect your actual history.
 
 If you do not know your exact average cost, you can use an estimate or current market price. Gain/loss figures will be based on whichever cost you enter.
 
@@ -211,12 +212,12 @@ If you do not know your exact average cost, you can use an estimate or current m
 - Use `USD`, `CAD`, or `CNY` as currency codes.
 - Use `source_record_id` when possible if you plan to import the same file multiple times.
 - Avoid duplicate rows unless they represent separate real activities.
-- Export a backup from Fintify before importing large changes.
+- Export a backup from DaysGain before importing large changes.
 - Review your portfolio after importing to confirm holdings and values look correct.
 
 ## Data Accuracy
 
-Fintify relies on the data you enter or import.
+DaysGain relies on the data you enter or import.
 
 Incomplete, duplicated, incorrectly formatted, or inconsistent CSV data may cause inaccurate portfolio values, cost basis, gain/loss figures, dividend summaries, account summaries, or charts.
 
@@ -230,13 +231,13 @@ CSV files may contain investment records and financial information.
 
 Store, back up, and share exported CSV files carefully.
 
-Fintify is designed as a local-first app. Your portfolio records are stored on your device unless you choose to export, share, or otherwise provide them outside the app.
+DaysGain is designed as a local-first app. Your portfolio records are stored on your device unless you choose to export, share, or otherwise provide them outside the app.
 
 ## Need Help?
 
 If you run into issues or have questions, contact us at:
 
-**support@fintify.ca**
+**daysgain.app@gmail.com**
 
 When reporting an import issue, please include:
 

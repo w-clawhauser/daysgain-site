@@ -1,23 +1,24 @@
 ---
-title: Fintify CSV 导入指南
+title: DaysGain CSV 导入指南
 permalink: /zh/csv-import-guide/
 lang: zh-Hans
 current_language: 中文
 alternate_label: English
 alternate_lang: en
-alternate_url: /csv-import-guide/
-home_url: /zh/
+alternate_url: ../../csv-import-guide
+home_url: ../
+asset_prefix: ../../
 ---
 
-# Fintify CSV 导入指南
+# DaysGain CSV 导入指南
 
-Fintify 支持 CSV 导入，方便你把历史交易记录导入应用。
+DaysGain 支持 CSV 导入，方便你把历史交易记录导入应用。
 
 CSV 导入适合用于迁移已有交易历史、从备份恢复数据，或通过电子表格管理记录。
 
 ## 1. 可以导入哪些记录？
 
-Fintify 支持导入以下投资和现金活动记录：
+DaysGain 支持导入以下投资和现金活动记录：
 
 - 买入
 - 卖出
@@ -30,7 +31,7 @@ Fintify 支持导入以下投资和现金活动记录：
 
 为了更准确地追踪投资组合、市值、成本、收益和分红，建议在可能的情况下导入完整交易历史。
 
-如果你没有完整历史记录，也可以从当前持仓开始使用 Fintify。做法是用当前总股数和平均成本添加一笔初始买入记录。
+如果你没有完整历史记录，也可以从当前持仓开始使用 DaysGain。做法是用当前总股数和平均成本添加一笔初始买入记录。
 
 例如，如果你当前持有 200 股 NVDA，平均成本为 120 美元，可以导入一行：
 
@@ -39,7 +40,7 @@ Date,Type,Ticker,AccountName,AccountType,Institution,OwnerName,Quantity,Price,Cu
 2026-04-27,Buy,NVDA,RRSP,RRSP,Questrade,WD,200,120,USD,0,Initial holding based on average cost
 ```
 
-这样 Fintify 可以从该日期开始追踪当前持仓。该日期之前的历史表现可能无法完全准确。
+这样 DaysGain 可以从该日期开始追踪当前持仓。该日期之前的历史表现可能无法完全准确。
 
 ## 3. CSV 格式
 
@@ -70,7 +71,7 @@ Date,Type,Ticker,AccountName,AccountType,Institution,OwnerName,Quantity,Price,Cu
 
 ## 5. 市场和代码格式
 
-Fintify 会根据代码格式自动判断市场，不需要额外提供 market 字段。
+DaysGain 会根据代码格式自动判断市场，不需要额外提供 market 字段。
 
 | 市场 | 示例代码 | 格式 |
 | --- | --- | --- |
@@ -105,7 +106,7 @@ Date,Type,Ticker,AccountName,AccountType,Institution,OwnerName,Quantity,Price,Cu
 
 ## 8. 数据准确性
 
-Fintify 的计算依赖你输入或导入的数据。
+DaysGain 的计算依赖你输入或导入的数据。
 
 不完整、重复、格式错误或不一致的数据可能导致组合市值、成本、收益、分红汇总、账户汇总或图表不准确。
 
@@ -119,10 +120,10 @@ CSV 文件可能包含投资记录和其他财务信息。
 
 请安全地保存、备份和分享 CSV 文件。
 
-Fintify 采用本地优先设计。你的投资记录默认保存在设备本地，除非你主动导出、分享或通过其他方式提供到应用之外。
+DaysGain 采用本地优先设计。你的投资记录默认保存在设备本地，除非你主动导出、分享或通过其他方式提供到应用之外。
 
 ## 10. 需要帮助？
 
 如有问题、反馈或错误报告，请联系：
 
-**support@fintify.ca**
+**daysgain.app@gmail.com**

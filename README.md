@@ -1,17 +1,17 @@
-# Fintify
+# DaysGain
 
-Fintify is a personal portfolio and passive income tracking app designed to help self-directed investors see their accounts, holdings, returns, dividends, and income more clearly.
+DaysGain is a personal portfolio and passive income tracking app designed to help self-directed investors see their accounts, holdings, returns, dividends, and income more clearly.
 
 ## App Store Positioning
 
-**App Name:** Fintify: Wealth Lens  
+**App Name:** DaysGain: Wealth Lens  
 **Subtitle:** Portfolio and passive income clarity
 
-Fintify helps you see through scattered accounts, markets, holdings, returns, and dividend income in one clear view.
+DaysGain helps you see through scattered accounts, markets, holdings, returns, and dividend income in one clear view.
 
 ## Documentation
 
-- [About Fintify](about.md)
+- [About DaysGain](about.md)
 - [Privacy Policy](privacy.md)
 - [Terms and Disclaimer](terms.md)
 - [Support / FAQ](support.md)
@@ -21,9 +21,9 @@ Fintify helps you see through scattered accounts, markets, holdings, returns, an
 
 For questions, feedback, or bug reports, please contact:
 
-**support@fintify.ca**
+**daysgain.app@gmail.com**
 
-## What Fintify Helps Track
+## What DaysGain Helps Track
 
 - Portfolio value
 - Holdings
@@ -39,11 +39,11 @@ For questions, feedback, or bug reports, please contact:
 
 ## Data and Privacy
 
-Fintify is designed as a local-first app.
+DaysGain is designed as a local-first app.
 
 Your portfolio records are stored on your device unless you choose to export, share, or otherwise provide them outside the app.
 
-Fintify does not require a brokerage login.
+DaysGain does not require a brokerage login.
 
 Read more:
 
@@ -52,6 +52,6 @@ Read more:
 
 ## Disclaimer
 
-Fintify is designed for personal tracking, organization, and informational purposes only.
+DaysGain is designed for personal tracking, organization, and informational purposes only.
 
 It does not provide financial advice, investment recommendations, tax advice, legal advice, brokerage services, portfolio management services, or trading services.
