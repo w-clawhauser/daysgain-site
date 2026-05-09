@@ -5,8 +5,8 @@ lang: en
 current_language: English
 alternate_label: 中文
 alternate_lang: zh-Hans
-alternate_url: ../zh/terms
-home_url: ../
+alternate_url: https://daysgain.com/zh/terms/
+home_url: https://daysgain.com/
 asset_prefix: ../
 ---
 
@@ -112,4 +112,4 @@ Your continued use of DaysGain after changes are made means you accept the updat
 
 If you have questions about these Terms and Disclaimer, contact us at:
 
-**[daysgain.app@gmail.com]**
+**hello.com**

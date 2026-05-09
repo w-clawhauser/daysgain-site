@@ -11,17 +11,17 @@ DaysGain helps you see through scattered accounts, markets, holdings, returns, a
 
 ## Documentation
 
-- [About DaysGain](about.md)
-- [Privacy Policy](privacy.md)
-- [Terms and Disclaimer](terms.md)
-- [Support / FAQ](support.md)
-- [CSV Import Guide](csv-import-guide.md)
+- [About DaysGain](https://daysgain.com/about/)
+- [Privacy Policy](https://daysgain.com/privacy/)
+- [Terms and Disclaimer](https://daysgain.com/terms/)
+- [Support / FAQ](https://daysgain.com/support/)
+- [CSV Import Guide](https://daysgain.com/csv-import-guide/)
 
 ## Support
 
 For questions, feedback, or bug reports, please contact:
 
-**daysgain.app@gmail.com**
+**hello@daysgain.com**
 
 ## What DaysGain Helps Track
 
@@ -47,8 +47,8 @@ DaysGain does not require a brokerage login.
 
 Read more:
 
-- [Privacy Policy](privacy.md)
-- [Terms and Disclaimer](terms.md)
+- [Privacy Policy](https://daysgain.com/privacy/)
+- [Terms and Disclaimer](https://daysgain.com/terms/)
 
 ## Disclaimer
 

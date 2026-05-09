@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="{{ page.asset_prefix | default: "" }}assets/icons/daysgain.png">
   <link rel="apple-touch-icon" href="{{ page.asset_prefix | default: "" }}assets/icons/daysgain.png">
   {% if page.alternate_url %}
-  <link rel="alternate" hreflang="{{ page.lang | default: 'en' }}" href="{{ page.url }}">
+  <link rel="alternate" hreflang="{{ page.lang | default: 'en' }}" href="{{ site.url }}{{ page.url }}">
   <link rel="alternate" hreflang="{{ page.alternate_lang | default: 'en' }}" href="{{ page.alternate_url }}">
   {% endif %}
   <style>
@@ -179,7 +179,7 @@
 <body>
   <header>
     <div class="topbar">
-      <a class="brand" href="{{ page.home_url | default: "./" }}" target="_blank" rel="noopener noreferrer">
+      <a class="brand" href="{{ page.home_url | default: 'https://daysgain.com/' }}" target="_blank" rel="noopener noreferrer">
         <img class="brand-logo" src="{{ page.asset_prefix | default: "" }}assets/brand/daysgain-logo-light.png" alt="DaysGain">
       </a>
       {% if page.alternate_url %}

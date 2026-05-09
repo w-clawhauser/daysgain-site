@@ -5,8 +5,8 @@ lang: zh-Hans
 current_language: 中文
 alternate_label: English
 alternate_lang: en
-alternate_url: ../../privacy
-home_url: ../
+alternate_url: https://daysgain.com/privacy/
+home_url: https://daysgain.com/zh/
 asset_prefix: ../../
 ---
 
@@ -96,4 +96,4 @@ DaysGain 并非面向儿童设计。我们不会有意收集儿童的个人信�
 
 如对本隐私政策有任何问题，请联系：
 
-**daysgain.app@gmail.com**
+**hello@daysgain.com**

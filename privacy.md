@@ -5,8 +5,8 @@ lang: en
 current_language: English
 alternate_label: 中文
 alternate_lang: zh-Hans
-alternate_url: ../zh/privacy
-home_url: ../
+alternate_url: https://daysgain.com/zh/privacy/
+home_url: https://daysgain.com/
 asset_prefix: ../
 ---
 
@@ -123,4 +123,4 @@ If we make material changes, we will update the effective date and publish the r
 
 If you have questions about this Privacy Policy, please contact:
 
-**daysgain.app@gmail.com**
+**hello@daysgain.com**

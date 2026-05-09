@@ -5,8 +5,8 @@ lang: en
 current_language: English
 alternate_label: 中文
 alternate_lang: zh-Hans
-alternate_url: ../zh/support
-home_url: ../
+alternate_url: https://daysgain.com/zh/support/
+home_url: https://daysgain.com/
 asset_prefix: ../
 ---
 
@@ -20,7 +20,7 @@ DaysGain is a personal portfolio and dividend tracking app designed to help user
 
 For questions, feedback, or bug reports, contact us at:
 
-**daysgain.app@gmail.com**
+**hello@daysgain.com**
 
 When reporting an issue, please include as much of the following information as possible:
 
@@ -59,7 +59,7 @@ DaysGain supports CSV import so you can bring your transaction history into the 
 
 See the CSV Import Guide for formatting requirements and examples:
 
-[CSV Import Guide](../csv-import-guide)
+[CSV Import Guide](https://daysgain.com/csv-import-guide/)
 
 ### CSV Export
 
@@ -85,7 +85,7 @@ DaysGain is designed as a local-first app. Your portfolio records are stored on 
 
 Read the Privacy Policy:
 
-[Privacy Policy](../privacy)
+[Privacy Policy](https://daysgain.com/privacy/)
 
 ### Terms and Disclaimer
 
@@ -93,10 +93,10 @@ DaysGain is for personal tracking, organization, and informational purposes only
 
 Read the Terms and Disclaimer:
 
-[Terms and Disclaimer](../terms)
+[Terms and Disclaimer](https://daysgain.com/terms/)
 
 ## Useful Links
 
-- [Privacy Policy](../privacy)
-- [Terms and Disclaimer](../terms)
-- [CSV Import Guide](../csv-import-guide)
+- [Privacy Policy](https://daysgain.com/privacy/)
+- [Terms and Disclaimer](https://daysgain.com/terms/)
+- [CSV Import Guide](https://daysgain.com/csv-import-guide/)

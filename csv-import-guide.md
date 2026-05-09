@@ -5,8 +5,8 @@ lang: en
 current_language: English
 alternate_label: 中文
 alternate_lang: zh-Hans
-alternate_url: ../zh/csv-import-guide
-home_url: ../
+alternate_url: https://daysgain.com/zh/csv-import-guide/
+home_url: https://daysgain.com/
 asset_prefix: ../
 ---
 
@@ -237,7 +237,7 @@ DaysGain is designed as a local-first app. Your portfolio records are stored on 
 
 If you run into issues or have questions, contact us at:
 
-**daysgain.app@gmail.com**
+**hello@daysgain.com**
 
 When reporting an import issue, please include:
 

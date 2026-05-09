@@ -5,8 +5,8 @@ lang: en
 current_language: English
 alternate_label: 中文
 alternate_lang: zh-Hans
-alternate_url: ../zh/
-home_url: ../
+alternate_url: https://daysgain.com/zh/
+home_url: https://daysgain.com/
 asset_prefix: ../
 ---
 
@@ -118,8 +118,8 @@ DaysGain does not require a DaysGain account and does not connect to your broker
 
 Read more:
 
-- [Privacy Policy](../privacy)
-- [Terms and Disclaimer](../terms)
+- [Privacy Policy](https://daysgain.com/privacy/)
+- [Terms and Disclaimer](https://daysgain.com/terms/)
 
 ## Important Disclaimer
 
@@ -137,4 +137,4 @@ Market data, dividends, exchange rates, and calculations may be delayed, incompl
 
 For questions, feedback, or bug reports, please contact:
 
-**daysgain.app@gmail.com**
+**hello@daysgain.com**
