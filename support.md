@@ -42,14 +42,20 @@ DaysGain currently supports portfolio tracking for:
 - U.S. stocks and ETFs
 - Canadian stocks and ETFs
 - China A-share stocks and ETFs
+- Hong Kong stocks and ETFs
+- Australian stocks and ETFs
+- UK stocks and ETFs
 
 Ticker formats may vary by market. For example:
 
 - U.S.: `AAPL`, `MSFT`, `VOO`
 - Canada: `RY.TO`, `ENB.TO`, `VDY.TO`
 - China A-share: `600036.SS`, `000651.SZ`, `510300.SS`
+- Hong Kong: `0005.HK`, `0700.HK`, `2800.HK`
+- Australia: `BHP.AX`, `CBA.AX`, `VAS.AX`
+- UK: `HSBA.L`, `ULVR.L`, `VWRL.L`
 
-Other markets, such as Hong Kong, Europe, Australia, Japan, and other international exchanges, are not officially supported yet.
+Other markets, such as Japan, Korea, Singapore, Europe outside the UK, and other international exchanges, are not officially supported yet.
 
 Market data availability may vary by ticker and data provider.
 
@@ -67,6 +73,12 @@ DaysGain supports CSV export so you can back up or transfer your investment reco
 
 Exported CSV files may contain investment records and financial information. Please store and share exported files securely.
 
+### iCloud Sync
+
+DaysGain supports optional iCloud Sync for backing up and syncing your portfolio data across your Apple devices.
+
+If iCloud Sync is turned off, new data stays on the device. Existing data already stored in iCloud may not be deleted automatically.
+
 ### Manual Transactions
 
 You can manually add transactions such as buys, sells, deposits, and withdrawals inside the app.
@@ -81,7 +93,7 @@ Market data may be delayed, incomplete, unavailable, or inaccurate.
 
 ### Privacy
 
-DaysGain is designed as a local-first app. Your portfolio records are stored on your device unless you choose to export, share, or otherwise provide them outside the app.
+DaysGain is designed as a local-first app. Your portfolio records are stored on your device unless you choose to export, share, enable iCloud Sync, or otherwise provide them outside the app.
 
 Read the Privacy Policy:
 

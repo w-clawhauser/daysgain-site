@@ -7,7 +7,7 @@ DaysGain is a personal portfolio and passive income tracking app designed to hel
 **App Name:** DaysGain: Wealth Lens  
 **Subtitle:** Portfolio and passive income clarity
 
-DaysGain helps you see through scattered accounts, markets, holdings, returns, and dividend income in one clear view.
+DaysGain helps you see through scattered accounts, global markets, holdings, returns, and dividend income in one clear view.
 
 ## Documentation
 
@@ -35,13 +35,14 @@ For questions, feedback, or bug reports, please contact:
 - Multiple owners
 - Multiple brokerages
 - Multiple markets and currencies
+- Optional iCloud sync and backup
 - Dividend and stock split events when available
 
 ## Data and Privacy
 
 DaysGain is designed as a local-first app.
 
-Your portfolio records are stored on your device unless you choose to export, share, or otherwise provide them outside the app.
+Your portfolio records are stored on your device unless you choose to export, share, enable iCloud Sync, or otherwise provide them outside the app.
 
 DaysGain does not require a brokerage login.
 

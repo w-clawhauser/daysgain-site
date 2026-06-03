@@ -14,7 +14,7 @@ asset_prefix: ../
 
 DaysGain is a personal portfolio and passive income tracking app designed for self-directed investors who want a clearer view of their financial picture.
 
-DaysGain helps you see through scattered accounts, markets, holdings, returns, and dividend income in one clear view.
+DaysGain helps you see through scattered accounts, global markets, holdings, returns, and dividend income in one clear view.
 
 ## Why I Built DaysGain
 
@@ -28,7 +28,7 @@ Before building DaysGain, I found myself relying on different tools for differen
 
 So I built DaysGain to bring these pieces together.
 
-DaysGain also reflects a family use case. As a Chinese Canadian investor, I wanted one place to track Canadian and US investments, while also helping my mother keep a clearer record of her stock investments and dividend income in China. This is one reason DaysGain includes support for China A-share securities alongside US and Canadian markets.
+DaysGain also reflects a family use case. As a Chinese Canadian investor, I wanted one place to track Canadian and US investments, while also helping my mother keep a clearer record of her stock investments and dividend income in China. This is one reason DaysGain includes support for China A-share securities alongside US and Canadian markets. DaysGain now also supports Hong Kong, Australian, and UK securities where market data is available.
 
 DaysGain is designed to help turn scattered investment records into a clearer picture of portfolio value, returns, dividends, passive income, account structure, and personal contribution records.
 
@@ -49,6 +49,7 @@ DaysGain helps you track:
 - Multiple accounts
 - Multiple brokerages
 - Multiple markets and currencies
+- Optional iCloud sync and backup
 - Dividend and stock split events when available from market data providers
 
 ## Who DaysGain Is For
@@ -60,7 +61,7 @@ It may be useful if you:
 - Hold investments across multiple accounts
 - Track TFSA, RRSP, and non-registered investment accounts
 - Use more than one brokerage
-- Invest in Canadian and US stocks or ETFs
+- Invest across supported markets, including Canadian, US, China A-share, Hong Kong, Australian, and UK securities
 - Care about dividend income and passive income visibility
 - Want to keep personal records of deposits and withdrawals
 - Prefer CSV import and export instead of brokerage login
@@ -82,11 +83,11 @@ Organize records by owner, account type, institution, and account.
 
 ### Multi-Market Support
 
-Track US, Canadian, and China A-share securities, including stocks and ETFs.
+Track US, Canadian, China A-share, Hong Kong, Australian, and UK securities where market data is available.
 
 ### Transaction and Cash Activity Records
 
-Record buys, sells, deposits, and withdrawals.
+Record buys, sells, deposits, and withdrawals. You can also create a new security while adding a transaction.
 
 ### TFSA, RRSP, and Non-Registered Account Tracking
 
@@ -94,7 +95,11 @@ Keep personal records of registered and non-registered investment accounts, incl
 
 ### CSV Import and Export
 
-Import transaction history, export backups, and keep your data portable.
+Import transaction history, export backups, and keep your data portable. DaysGain shows skipped-row feedback after import to help you review file issues.
+
+### iCloud Sync and Backup
+
+Optionally sync and back up DaysGain data through your private iCloud account.
 
 ### Dividend and Stock Event History
 
@@ -104,13 +109,13 @@ View dividend and stock split events when available from market data providers.
 
 DaysGain does not require a brokerage login.
 
-Your portfolio records are stored on your device unless you choose to export or share them.
+Your portfolio records are stored on your device unless you choose to export, share, or enable iCloud Sync.
 
 ## Data and Privacy
 
 DaysGain is designed as a local-first app.
 
-Your portfolio records are stored on your device using local app storage unless you choose to export, share, or otherwise provide them outside the app.
+Your portfolio records are stored on your device using local app storage unless you choose to export, share, enable iCloud Sync, or otherwise provide them outside the app.
 
 DaysGain may request market data for securities you add, such as prices, historical prices, dividends, exchange rates, security metadata, and corporate actions.
 
