@@ -30,16 +30,16 @@ Recommended workflow:
 
 If you are starting fresh with no existing data, follow the format described below.
 
-## One CSV Format
+## CSV Format
 
 DaysGain uses one CSV format for both import and export.
 
-Your CSV file must include a header row.
+Your CSV file must include a header row. Column order does not matter. Column names are case-insensitive.
 
 The standard DaysGain CSV header is:
 
 ```csv
-source_record_id,date,activity_category,type,account_name,owner_name,account_type,institution,ticker,api_symbol,security_name,market,currency,quantity,price,cash_amount,fee,notes,counterparty_account_name
+date,activity_category,type,account_name,owner_name,account_type,institution,currency,ticker,security_name,market,quantity,price,cash_amount,fee,notes
 ```
 
 ## What You Can Import
@@ -53,44 +53,33 @@ DaysGain CSV import supports:
 
 Dividend and split events are not imported manually through CSV. DaysGain retrieves dividend and split data from market data providers when available.
 
-## Required Core Columns
+## Required Columns
 
-Every CSV file must include these core columns:
+Every CSV file must include these columns:
 
-| Column | Required | Description |
-|---|---:|---|
-| `date` | Yes | Activity date. Recommended format: `YYYY-MM-DD`. |
-| `activity_category` | Yes | Use `transaction` for buy/sell rows. Use `transfer` for deposit/withdraw rows. |
-| `type` | Yes | Use `buy`, `sell`, `deposit`, or `withdraw`. |
-| `account_name` | Yes | Account display name or source label. Keep it consistent for the same account. |
-| `owner_name` | Yes | Owner label, such as initials or name. The column is required, but the value can be left blank if needed. |
-| `account_type` | Yes | Account type, such as `TFSA`, `RRSP`, `Cash`, `Margin`, or `A股账户`. |
-| `institution` | Yes | Brokerage or institution, such as `Questrade`, `Wealthsimple`, `RBC`, or `国金证券`. |
-| `currency` | Yes | Use `USD`, `CAD`, or `CNY`. |
+| Column | Example | Description |
+|---|---|---|
+| `date` | `2026-01-15` | Activity date. Recommended format: `YYYY-MM-DD`. Also accepts `YYYY/MM/DD` or `MM/DD/YYYY`. |
+| `activity_category` | `transaction` | Use `transaction` for buy/sell rows. Use `transfer` for deposit/withdraw rows. Case-insensitive. |
+| `type` | `buy` | Use `buy`, `sell`, `deposit`, or `withdraw`. Case-insensitive. |
+| `account_name` | `Donald-TFSA-TD` | Account display name. Keep it consistent across rows for the same account. Max ~30 chars. |
+| `owner_name` | `Donald` | Owner label. Max ~10 chars. |
+| `account_type` | `TFSA` | Account type, such as `TFSA`, `RRSP`, `IRA`, or `Taxable`. Max ~10 chars. |
+| `institution` | `TD` | Brokerage or institution. Max ~10 chars. |
+| `currency` | `USD` | Must match exactly. Accepted values: `USD`, `CAD`, `CNY`, `HKD`, `AUD`, `GBP`. Case-insensitive. |
 
-## Full Column Reference
+## Optional Columns
 
-| Column | Required | Description |
-|---|---:|---|
-| `source_record_id` | Optional | Stable row ID used to avoid duplicate imports. Exported CSV files include this automatically. |
-| `date` | Yes | Activity date. Recommended format: `YYYY-MM-DD`. |
-| `activity_category` | Yes | Use `transaction` for buy/sell rows. Use `transfer` for deposit/withdraw rows. |
-| `type` | Yes | Use `buy`, `sell`, `deposit`, or `withdraw`. |
-| `account_name` | Yes | Account display name or source label. Keep this aligned with `owner_name`, `account_type`, and `institution`. |
-| `owner_name` | Yes | Owner label, such as `WD`, `My`, or another label you use. The column is required, but the value can be left blank if needed. |
-| `account_type` | Yes | Account type, such as `TFSA`, `RRSP`, `Cash`, `Margin`, `Non-registered`, or `A股账户`. |
-| `institution` | Yes | Brokerage or institution, such as `Questrade`, `Wealthsimple`, `RBC`, `IBKR`, or `国金证券`. |
-| `ticker` | Required for buy/sell | Display ticker, such as `AAPL`, `ENB.TO`, or `600036`. Leave blank for deposit/withdraw rows. |
-| `api_symbol` | Recommended for buy/sell | Market data symbol. For China A-shares, use symbols such as `600036.SS` or `000651.SZ`. |
-| `security_name` | Optional | Security name, such as `Apple Inc.` or `招商银行`. |
-| `market` | Recommended for buy/sell | Market hint used when `api_symbol` is blank. Use `us`, `canada`, or `chinaA`. |
-| `currency` | Yes | Use `USD`, `CAD`, or `CNY`. |
-| `quantity` | Required for buy/sell | Number of shares or units. Use positive numbers for both buy and sell rows. |
-| `price` | Required for buy/sell | Price per share or unit. |
-| `cash_amount` | Required for deposit/withdraw | Cash amount for transfer rows. Use positive numbers for both deposit and withdraw rows. |
-| `fee` | Optional | Transaction fee or commission. Usually used for buy/sell rows. |
-| `notes` | Optional | Any additional notes. |
-| `counterparty_account_name` | Optional | Reserved for transfer workflows. Usually blank. |
+| Column | Description |
+|---|---|
+| `ticker` | Stock symbol. For international stocks, use the full symbol including suffix — e.g. `601398.SS` (China A), `0700.HK` (HK), `RY.TO` (Canada), `HSBA.L` (UK), `CBA.AX` (Australia). |
+| `security_name` | Display name, e.g. `Apple Inc.` Max ~50 chars. |
+| `market` | `USA` / `CAN` / `CHN` / `HKG` / `AUS` / `GBR`. Case-insensitive. Inferred from ticker if omitted. |
+| `quantity` | Positive whole number (≥ 1). Required for buy/sell. |
+| `price` | Positive number. Required for buy/sell. Commas OK, e.g. `1,234.56`. |
+| `cash_amount` | Positive number. Required for deposit/withdraw. Commas OK. |
+| `fee` | Positive number. Commas OK. Default 0 if omitted. |
+| `notes` | Any notes. |
 
 ## Activity Rules
 
@@ -107,8 +96,8 @@ For buy and sell rows:
 Example:
 
 ```csv
-source_record_id,date,activity_category,type,account_name,owner_name,account_type,institution,ticker,api_symbol,security_name,market,currency,quantity,price,cash_amount,fee,notes,counterparty_account_name
-buy-2024-01-16-aapl,2024-01-16,transaction,buy,WD-TFSA-Questrade,WD,TFSA,Questrade,AAPL,AAPL,Apple Inc.,us,USD,10,185.50,,1.00,Initial position,
+date,activity_category,type,account_name,owner_name,account_type,institution,currency,ticker,security_name,market,quantity,price,cash_amount,fee,notes
+2026-01-15,transaction,buy,Donald-TFSA-TD,Donald,TFSA,TD,USD,AAPL,Apple Inc.,USA,5,210.50,,9.99,
 ```
 
 ### Deposit and Withdraw Rows
@@ -119,14 +108,14 @@ For deposit and withdraw rows:
 - `type` must be `deposit` or `withdraw`.
 - `currency` must be filled.
 - `cash_amount` must be filled.
-- `ticker`, `api_symbol`, `security_name`, `market`, `quantity`, `price`, and `fee` should usually be blank.
+- `ticker`, `security_name`, `market`, `quantity`, `price`, and `fee` should usually be blank.
 
 Example:
 
 ```csv
-source_record_id,date,activity_category,type,account_name,owner_name,account_type,institution,ticker,api_symbol,security_name,market,currency,quantity,price,cash_amount,fee,notes,counterparty_account_name
-dep-2024-01-15,2024-01-15,transfer,deposit,WD-TFSA-Questrade,WD,TFSA,Questrade,,,,,CAD,,,5000,,Initial deposit,
-wdr-2024-07-01,2024-07-01,transfer,withdraw,WD-TFSA-Questrade,WD,TFSA,Questrade,,,,,CAD,,,1000,,Cash withdrawal,
+date,activity_category,type,account_name,owner_name,account_type,institution,currency,ticker,security_name,market,quantity,price,cash_amount,fee,notes
+2026-01-05,transfer,deposit,Donald-TFSA-TD,Donald,TFSA,TD,CAD,,,,,,5000.00,,Initial deposit
+2026-04-01,transfer,withdraw,Donald-TFSA-TD,Donald,TFSA,TD,CAD,,,,,,1000.00,,
 ```
 
 ## Supported Activity Combinations
@@ -138,51 +127,39 @@ wdr-2024-07-01,2024-07-01,transfer,withdraw,WD-TFSA-Questrade,WD,TFSA,Questrade,
 | `transfer` | `deposit` | Add cash to an account |
 | `transfer` | `withdraw` | Remove cash from an account |
 
-## Ticker, API Symbol, and Market Detection
+## Ticker and Market Detection
 
-DaysGain separates the display ticker from the market data symbol.
+Use the full market symbol for the `ticker` field, including any exchange suffix.
 
-| Field | Purpose | Example |
-|---|---|---|
-| `ticker` | The ticker shown in the app | `ENB` |
-| `api_symbol` | The symbol used for market data lookup | `ENB.TO` |
-| `market` | Optional market hint | `canada` |
+| Market | `market` value | `ticker` example | Currency |
+|---|---|---|---|
+| US stocks / ETFs | `USA` | `AAPL` | `USD` |
+| Canadian stocks / ETFs | `CAN` | `RY.TO` | `CAD` |
+| China A-shares (Shanghai) | `CHN` | `601398.SS` | `CNY` |
+| China A-shares (Shenzhen) | `CHN` | `000651.SZ` | `CNY` |
+| Hong Kong stocks | `HKG` | `0700.HK` | `HKD` |
+| Australian stocks | `AUS` | `CBA.AX` | `AUD` |
+| UK stocks | `GBR` | `HSBA.L` | `GBP` |
 
 DaysGain determines the market using this priority:
 
-1. `api_symbol`, if provided.
-2. `market`, if `api_symbol` is blank.
-3. `currency`, if both `api_symbol` and `market` are blank.
-
-Recommended format:
-
-| Market | `market` value | `ticker` example | `api_symbol` example | Currency |
-|---|---|---|---|---|
-| US stocks / ETFs | `us` | `AAPL` | `AAPL` | `USD` |
-| Canadian stocks / ETFs | `canada` | `ENB.TO` or `ENB` | `ENB.TO` | `CAD` |
-| China A-shares / ETFs | `chinaA` | `600036` | `600036.SS` | `CNY` |
-| China Shenzhen-listed securities | `chinaA` | `000651` | `000651.SZ` | `CNY` |
-
-For the most accurate market data lookup:
-
-- Use `api_symbol` for Canadian and China A-share securities.
-- For Shanghai-listed China A-shares, use `.SS`, such as `600036.SS`.
-- For Shenzhen-listed China A-shares, use `.SZ`, such as `000651.SZ`.
-- US securities usually use the same value for `ticker` and `api_symbol`.
+1. `market`, if provided.
+2. Inferred from the ticker suffix if `market` is blank.
+3. `currency`, if both `market` and ticker suffix are ambiguous.
 
 Ticker availability and market data quality may vary by provider.
 
 ## Example CSV
 
 ```csv
-source_record_id,date,activity_category,type,account_name,owner_name,account_type,institution,ticker,api_symbol,security_name,market,currency,quantity,price,cash_amount,fee,notes,counterparty_account_name
-dep-2024-01-15,2024-01-15,transfer,deposit,WD-TFSA-Questrade,WD,TFSA,Questrade,,,,,CAD,,,5000,,Initial deposit,
-buy-2024-01-16-aapl,2024-01-16,transaction,buy,WD-TFSA-Questrade,WD,TFSA,Questrade,AAPL,AAPL,Apple Inc.,us,USD,10,185.50,,1.00,Initial position,
-buy-2024-02-10-enb,2024-02-10,transaction,buy,WD-TFSA-Questrade,WD,TFSA,Questrade,ENB.TO,ENB.TO,Enbridge Inc.,canada,CAD,50,48.25,,0.00,Canadian dividend stock,
-buy-2024-03-05-nvda,2024-03-05,transaction,buy,WD-RRSP-Questrade,WD,RRSP,Questrade,NVDA,NVDA,NVIDIA Corp.,us,USD,5,850.00,,1.00,Before split,
-buy-2024-03-10-600036,2024-03-10,transaction,buy,WD-China-Guojin,WD,A股账户,国金证券,600036,600036.SS,招商银行,chinaA,CNY,1000,38.20,,5.00,A-share position,
-sell-2024-06-20-aapl,2024-06-20,transaction,sell,WD-TFSA-Questrade,WD,TFSA,Questrade,AAPL,AAPL,Apple Inc.,us,USD,2,210.00,,1.00,Partial sale,
-wdr-2024-07-01,2024-07-01,transfer,withdraw,WD-TFSA-Questrade,WD,TFSA,Questrade,,,,,CAD,,,1000,,Cash withdrawal,
+date,activity_category,type,account_name,owner_name,account_type,institution,currency,ticker,security_name,market,quantity,price,cash_amount,fee,notes
+2026-01-05,transfer,deposit,Donald-TFSA-TD,Donald,TFSA,TD,CAD,,,,,,5000.00,,Initial deposit
+2026-01-15,transaction,buy,Donald-TFSA-TD,Donald,TFSA,TD,USD,AAPL,Apple Inc.,USA,5,210.50,,9.99,
+2026-01-20,transaction,buy,Donald-RRSP-TD,Donald,RRSP,TD,CAD,RY.TO,Royal Bank of Canada,CAN,10,132.80,,0,
+2026-02-10,transaction,buy,Donald-Taxable-IBKR,Donald,Taxable,IBKR,HKD,0700.HK,Tencent Holdings,HKG,100,380.00,,0,
+2026-02-20,transaction,buy,Donald-Taxable-IBKR,Donald,Taxable,IBKR,CNY,601398.SS,ICBC,CHN,1000,6.52,,0,
+2026-03-15,transaction,sell,Donald-TFSA-TD,Donald,TFSA,TD,USD,AAPL,Apple Inc.,USA,2,245.00,,9.99,Partial sell
+2026-04-01,transfer,withdraw,Donald-TFSA-TD,Donald,TFSA,TD,CAD,,,,,,1000.00,,
 ```
 
 ## Starting Without Complete History
@@ -194,8 +171,8 @@ If you already hold a position but do not have the full transaction history, add
 Example:
 
 ```csv
-source_record_id,date,activity_category,type,account_name,owner_name,account_type,institution,ticker,api_symbol,security_name,market,currency,quantity,price,cash_amount,fee,notes,counterparty_account_name
-initial-msft,2026-04-28,transaction,buy,WD-RRSP-Questrade,WD,RRSP,Questrade,MSFT,MSFT,Microsoft Corp.,us,USD,50,320.00,,0,Initial holding based on average cost,
+date,activity_category,type,account_name,owner_name,account_type,institution,currency,ticker,security_name,market,quantity,price,cash_amount,fee,notes
+2026-04-28,transaction,buy,Donald-RRSP-TD,Donald,RRSP,TD,USD,MSFT,Microsoft Corp.,USA,50,320.00,,0,Initial holding based on average cost
 ```
 
 DaysGain will track your position from this date forward. Gain/loss before this date will not reflect your actual history.
@@ -209,9 +186,6 @@ If you do not know your exact average cost, you can use an estimate or current m
 - Use `YYYY-MM-DD` date format when possible. Other formats such as `MM/DD/YYYY` may also be accepted.
 - Use positive numbers for both buy and sell quantities.
 - Use positive numbers for both deposit and withdraw cash amounts.
-- Use `USD`, `CAD`, or `CNY` as currency codes.
-- Use `source_record_id` when possible if you plan to import the same file multiple times.
-- Avoid duplicate rows unless they represent separate real activities.
 - Export a backup from DaysGain before importing large changes.
 - Review your portfolio after importing to confirm holdings and values look correct.
 
