@@ -55,13 +55,13 @@ Ticker formats may vary by market. For example:
 - Australia: `BHP.AX`, `CBA.AX`, `VAS.AX`
 - UK: `HSBA.L`, `ULVR.L`, `VWRL.L`
 
-Other markets, such as Japan, Korea, Singapore, Europe outside the UK, and other international exchanges, are not officially supported yet.
+Other markets are not supported.
 
 Market data availability may vary by ticker and data provider.
 
 ### CSV Import
 
-DaysGain supports CSV import so you can bring your transaction history into the app.
+DaysGain supports CSV import so you can bring your transaction history into the app. After import, DaysGain shows a summary of how many rows were imported successfully, how many were skipped as duplicates, and how many could not be parsed.
 
 See the CSV Import Guide for formatting requirements and examples:
 
