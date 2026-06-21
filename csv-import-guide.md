@@ -66,15 +66,15 @@ Every CSV file must include these columns:
 | `owner_name` | `Donald` | Owner label. Max ~10 chars. |
 | `account_type` | `TFSA` | Account type, such as `TFSA`, `RRSP`, `IRA`, or `Taxable`. Max ~10 chars. |
 | `institution` | `TD` | Brokerage or institution. Max ~10 chars. |
-| `currency` | `USD` | Must match exactly. Accepted values: `USD`, `CAD`, `CNY`, `HKD`, `AUD`, `GBP`. Case-insensitive. |
+| `currency` | `USD` | Must match exactly. Accepted values: `USD`, `CAD`, `CNY`, `HKD`, `AUD`, `GBP`, `SGD`, `TWD`. Case-insensitive. |
 
 ## Optional Columns
 
 | Column | Description |
 |---|---|
-| `ticker` | Stock symbol. For international stocks, use the full symbol including suffix — e.g. `601398.SS` (China A), `0700.HK` (HK), `RY.TO` (Canada), `HSBA.L` (UK), `CBA.AX` (Australia). |
+| `ticker` | Stock symbol. For international stocks, use the full symbol including suffix — e.g. `601398.SS` (China A), `0700.HK` (HK), `RY.TO` (Canada), `HSBA.L` (UK), `CBA.AX` (Australia), `D05.SI` (Singapore), `2330.TW` (Taiwan). |
 | `security_name` | Display name, e.g. `Apple Inc.` Max ~50 chars. |
-| `market` | `USA` / `CAN` / `CHN` / `HKG` / `AUS` / `GBR`. Case-insensitive. Inferred from ticker if omitted. |
+| `market` | `USA` / `CAN` / `CHN` / `HKG` / `AUS` / `GBR` / `SGX` / `TWS`. Case-insensitive. Inferred from ticker if omitted. |
 | `quantity` | Positive whole number (≥ 1). Required for buy/sell. |
 | `price` | Positive number. Required for buy/sell. Commas OK, e.g. `1,234.56`. |
 | `cash_amount` | Positive number. Required for deposit/withdraw. Commas OK. |
@@ -140,6 +140,8 @@ Use the full market symbol for the `ticker` field, including any exchange suffix
 | Hong Kong stocks | `HKG` | `0700.HK` | `HKD` |
 | Australian stocks | `AUS` | `CBA.AX` | `AUD` |
 | UK stocks | `GBR` | `HSBA.L` | `GBP` |
+| Singapore stocks | `SGX` | `D05.SI` | `SGD` |
+| Taiwan stocks | `TWS` | `2330.TW` | `TWD` |
 
 DaysGain determines the market using this priority:
 

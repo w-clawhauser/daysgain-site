@@ -66,15 +66,15 @@ DaysGain CSV 导入支持：
 | `owner_name` | `Donald` | 所有者标签。最多约 10 个字符。 |
 | `account_type` | `TFSA` | 账户类型，如 `TFSA`、`RRSP`、`IRA`、`Taxable`。最多约 10 个字符。 |
 | `institution` | `TD` | 券商或机构名称。最多约 10 个字符。 |
-| `currency` | `USD` | 必须完全匹配。支持：`USD`、`CAD`、`CNY`、`HKD`、`AUD`、`GBP`。不区分大小写。 |
+| `currency` | `USD` | 必须完全匹配。支持：`USD`、`CAD`、`CNY`、`HKD`、`AUD`、`GBP`、`SGD`、`TWD`。不区分大小写。 |
 
 ## 可选列
 
 | 列名 | 说明 |
 |---|---|
-| `ticker` | 股票代码。国际股票请使用完整代码，如 `601398.SS`（中国A股）、`0700.HK`（港股）、`RY.TO`（加拿大）、`HSBA.L`（英国）、`CBA.AX`（澳大利亚）。 |
+| `ticker` | 股票代码。国际股票请使用完整代码，如 `601398.SS`（中国A股）、`0700.HK`（港股）、`RY.TO`（加拿大）、`HSBA.L`（英国）、`CBA.AX`（澳大利亚）、`D05.SI`（新加坡）、`2330.TW`（台湾）。 |
 | `security_name` | 股票名称，如 `苹果公司`。最多约 50 个字符。 |
-| `market` | `USA` / `CAN` / `CHN` / `HKG` / `AUS` / `GBR`。不区分大小写。若不填则由股票代码自动推断。 |
+| `market` | `USA` / `CAN` / `CHN` / `HKG` / `AUS` / `GBR` / `SGX` / `TWS`。不区分大小写。若不填则由股票代码自动推断。 |
 | `quantity` | 正整数（≥ 1）。买入/卖出时必填。 |
 | `price` | 正数。买入/卖出时必填。可含逗号，如 `1,234.56`。 |
 | `cash_amount` | 正数。入金/出金时必填。可含逗号。 |
@@ -139,6 +139,8 @@ date,activity_category,type,account_name,owner_name,account_type,institution,cur
 | 港股 | `HKG` | `0700.HK` | `HKD` |
 | 澳大利亚股票 | `AUS` | `CBA.AX` | `AUD` |
 | 英国股票 | `GBR` | `HSBA.L` | `GBP` |
+| 新加坡股票 | `SGX` | `D05.SI` | `SGD` |
+| 台湾股票 | `TWS` | `2330.TW` | `TWD` |
 
 市场推断优先级：
 
