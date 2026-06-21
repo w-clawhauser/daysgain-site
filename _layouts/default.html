@@ -10,6 +10,14 @@
   <link rel="alternate" hreflang="{{ page.lang | default: 'en' }}" href="{{ site.url }}{{ page.url }}">
   <link rel="alternate" hreflang="{{ page.alternate_lang | default: 'en' }}" href="{{ page.alternate_url }}">
   {% endif %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KT0MHBXBHZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KT0MHBXBHZ');
+  </script>
+
   <style>
     body {
       margin: 0;
